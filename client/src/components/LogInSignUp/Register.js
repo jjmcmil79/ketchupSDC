@@ -73,7 +73,7 @@ const Register = ({ user, setUser }) => {
           
           try{
                // const response = await axios.get(`http://localhost:3025/api/login/${userName}`)
-               const response = await axios.get(`https://ketchup-db.herokuapp.com/api/login/${userName}`)
+               const response = await axios.get(`https://teamketchupsdc.netlify.app/api/login/${userName}`)
                // .then((res) => 
                if(response.data.length === 0){
                     // setErrMsg('User name is not taken')
@@ -84,7 +84,7 @@ const Register = ({ user, setUser }) => {
                     formData.append("bio", newBio);
                     try{
                     //    const response = await axios.post("http://localhost:3025/api/createprofile", formData, {
-                       const response = await axios.post("https://ketchup-db.herokuapp.com/api/createprofile", formData, {
+                       const response = await axios.post("https://teamketchupsdc.netlify.app/api/createprofile", formData, {
                          headers: { 'Content-Type': 'application/json' },
                          withCredentials: true
                        }
