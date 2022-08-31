@@ -34,7 +34,7 @@ function LogInPage({ user, setUser, setLoading }) {
     try {
      let returnedData = await axios.post(
       // "http://localhost:3025/api/login/",
-      "https://ketchup-db.herokuapp.com/api/login/",
+      "https://teamketchupsdc.netlify.app/api/login/",
       data
     );
       if (!returnedData.data.username) {
