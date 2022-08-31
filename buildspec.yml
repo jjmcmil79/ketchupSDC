@@ -4,7 +4,7 @@ phases:
   install:
     commands:
       - echo Entered the install phase...
-      - curl -fsSL https://rpm.nodesource.com/setup_14.x | bash -
+      - curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
       - apt install -y nodejs
 
   pre_build:
