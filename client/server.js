@@ -198,6 +198,7 @@ app.post("/api/createprofile", upload.single("file"), async function (req, res, 
      }
    }
  );
+ 
 
 // Authenticates user with the use of passport middleware 
 app.post("/api/login", (req, res, next) =>
