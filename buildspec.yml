@@ -1,6 +1,12 @@
 # Do not change version. This is the version of aws buildspec, not the version of your buldspec file.
 version: 0.2
 phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+      - apt-get update -y
+      - apt-get install -y nodejs npm
+
   pre_build:
     commands:
       #installs dependencies into the node_modules/ directory
@@ -14,7 +20,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - rm -r node_modules
+      # - rm -r node_modules
 # Include only the files required for your application to run.
 artifacts:
   files:
