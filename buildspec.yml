@@ -5,7 +5,7 @@ phases:
     commands:
       #installs dependencies into the node_modules/ directory
       - npm install 
-      - npm install bcrypt 
+      
   build:
     commands:
       - echo Build started on `date`
@@ -23,3 +23,7 @@ artifacts:
     - package.json
     - appspec.yml
     - scripts/**/*
+    - middleware/**/*
+    - db/**/*
+    - config/**/*
+    - server.js
