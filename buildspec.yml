@@ -4,8 +4,8 @@ phases:
   install:
     commands:
       - echo Entered the install phase...
-      - yum update -y
-      - yum install -y nodejs npm
+      - apt-get update -y
+      - apt-get install -y nodejs npm
 
   pre_build:
     commands:
