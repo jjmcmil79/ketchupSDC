@@ -4,8 +4,8 @@ phases:
   install:
     commands:
       - echo Entered the install phase...
-      - yum update -y
-      # - yum install -y nodejs npm
+      - curl -fsSL https://rpm.nodesource.com/setup_14.x | bash -
+      - apt install -y nodejs
 
   pre_build:
     commands:
@@ -24,12 +24,13 @@ phases:
 # Include only the files required for your application to run.
 artifacts:
   files:
-    - public/**/*
-    - src/**/*
-    - package.json
-    - appspec.yml
-    - scripts/**/*
-    - middleware/**/*
-    - db/**/*
-    - config/**/*
-    - server.js
+    # - public/**/*
+    # - src/**/*
+    # - package.json
+    # - appspec.yml
+    # - scripts/**/*
+    # - middleware/**/*
+    # - db/**/*
+    # - config/**/*
+    # - server.js
+    - "**/*"
